@@ -1,7 +1,7 @@
 {
-    "name": "onspli/phpdoc-markdown-public",
-    "description": "Generate usage documentation (documents only it's public API) for a small library in Markdown format so it can be published in GitHub.",
-    "keywords" : [ "PHPDoc", "phpDocumentor", "Documentation", "Markdown" ],
+    "name": "onspli/phpdoc-markdown",
+    "description": "Generate documentation in Markdown format so it can be published in GitHub.",
+    "keywords" : [ "phpdoc", "phpDocumentor", "Documentation", "Markdown" ],
     "license": "MIT",
     "authors": [
       {

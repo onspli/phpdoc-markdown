@@ -1,4 +1,4 @@
-# phpdoc markdown template
+# phpdoc markdown templates
 
 [phpDocumentor](https://phpdoc.org/) template that generates Markdown documentation of the **public API** only to a **single README.md file**. It will skip all abstract classes and non-public methods. Fork of template [cvuorinen/phpdoc-markdown-public](https://github.com/cvuorinen/phpdoc-markdown-public) by Carl Vuorinen.
 
@@ -26,13 +26,13 @@ Read more about [installation of phpDocumentator](https://phpdoc.org/). Note tha
 > Ah, you discovered our secret. There is a phpDocumentor composer package that you could use to install phpDocumentor.
 >
 > However: phpDocumentor is a complex application, and its libraries are used in countless other libraries and applications (2 of our libraries have more than 150 million downloads each); and this means that the chances for a conflict between one of our dependencies and yours is high. And when I say high, it is really high.
-> 
+>
 > So, because of the above: we do not endorse nor actively support installing phpDocumentor using Composer.
 
-Next, run phpDocumentor and set template as `vendor/onspli/phpdoc-markdown-public/data/templates/markdown-public`.
+Next, run phpDocumentor and set template as `vendor/onspli/phpdoc-markdown/templates/public-onefile`.
 
 ```bash
-$ phpDocumentator.phar --directory=src --target=docs --template=vendor/onspli/phpdoc-markdown-public/data/templates/markdown-public
+$ phpDocumentator.phar --directory=src --target=docs --template=vendor/onspli/phpdoc-markdown/templates/public-onefile
 ```
 The documentation will be generated to `docs/README.md` file.
 
