@@ -13,7 +13,7 @@ Example of documentation generated with this template: https://github.com/onspli
 Install with Composer:
 
 ```bash
-composer require onspli/phpdoc-markdown-public
+composer require onspli/phpdoc-markdown
 ```
 
 ## Usage
