@@ -1,55 +1,39 @@
-# phpDocumentor markdown-public template
+# phpdoc markdown template
 
-[phpDocumentor template](http://www.phpdoc.org/docs/latest/getting-started/changing-the-look-and-feel.html) that generates Markdown documentation of only the public API. It will skip all abstract classes and non-public methods.
+[phpDocumentor](https://phpdoc.org/) template that generates Markdown documentation of the **public API** only to a **single README.md file**. It will skip all abstract classes and non-public methods. Fork of template [cvuorinen/phpdoc-markdown-public](https://github.com/cvuorinen/phpdoc-markdown-public) by Carl Vuorinen.
 
 The main use-case for this template is to generate simple and nice looking usage documentation, that can then be published on GitHub.
 
 For example, a small library can document it's public API in DocBlock comments, use this template to generate the Markdown documentation and then commit it to GitHub with the library to easily create a nice looking documentation for other developers to see.
 
-Example of documentation generated with this template: https://github.com/cvuorinen/raspicam-php/tree/master/docs
+Example of documentation generated with this template: https://github.com/onspli/chess/tree/master/docs
 
 ## Installation
 
-Install with composer:
+Install with Composer:
 
 ```bash
-composer require cvuorinen/phpdoc-markdown-public
+composer require onspli/phpdoc-markdown-public
 ```
 
 ## Usage
 
-Run phpDocumentor and set template as `vendor/cvuorinen/phpdoc-markdown-public/data/templates/markdown-public`.
+First, you need to install phpDocumentator. There are multiple options how to install it, one of them is using the PHAR:
+```bash
+$ wget https://phpdoc.org/phpDocumentor.phar
+```
+Read more about [installation of phpDocumentator](https://phpdoc.org/). Note that phpDocumentator is also available via Composer, however its documentation states
+> Ah, you discovered our secret. There is a phpDocumentor composer package that you could use to install phpDocumentor.
+>
+> However: phpDocumentor is a complex application, and its libraries are used in countless other libraries and applications (2 of our libraries have more than 150 million downloads each); and this means that the chances for a conflict between one of our dependencies and yours is high. And when I say high, it is really high.
+> 
+> So, because of the above: we do not endorse nor actively support installing phpDocumentor using Composer.
 
-**Example using command-line arguments:**
+Next, run phpDocumentor and set template as `vendor/onspli/phpdoc-markdown-public/data/templates/markdown-public`.
 
 ```bash
-./vendor/bin/phpdoc --directory=src/ --target=docs/ --template="vendor/cvuorinen/phpdoc-markdown-public/data/templates/markdown-public" --title="My Project Documentation"
+$ phpDocumentator.phar --directory=src/ --target=docs/ --template="vendor/onspli/phpdoc-markdown-public/data/templates/markdown-public" --title="My Project Documentation"
 ```
+The documentation will be generated to `docs/README.md` file.
 
-More information about the available arguments can be found at [running phpDocumentor](http://www.phpdoc.org/docs/latest/guides/running-phpdocumentor.html).
-
-**Example using configuration file:**
-
-Add a file called `phpdoc.xml` with the following content to the root of your project and invoke the `phpdoc` command without arguments. Modify the configuration to suit your project.
-
-```xml
-<?xml version="1.0" encoding="UTF-8" ?>
-<phpdoc>
-    <title>My Project Documentation</title>
-    <parser>
-        <target>build</target>
-    </parser>
-    <transformer>
-        <target>docs</target>
-    </transformer>
-    <transformations>
-        <template name="vendor/cvuorinen/phpdoc-markdown-public/data/templates/markdown-public" />
-    </transformations>
-    <files>
-        <directory>src</directory>
-        <ignore>test/*</ignore>
-    </files>
-</phpdoc>
-```
-
-More information about [configuring phpDocumentor](http://www.phpdoc.org/docs/latest/references/configuration.html).
+More information about [configuring phpDocumentor](https://docs.phpdoc.org/3.0/guide/references/configuration.html).
