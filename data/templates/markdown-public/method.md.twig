@@ -1,4 +1,4 @@
-### {{ method.name }}
+### {{ class.name }}::{{ method.name }}
 
 {{ method.summary|raw }}
 
@@ -7,7 +7,7 @@
 {{ class.name }}::{{ method.name }}( {% for argument in method.arguments %}
 {{- argument.types ? argument.types|join('|')~' ' }}
 {{- argument.byReference ? '&' }}
-{{- argument.name }}{{ argument.default ? ' = '~argument.default }}
+{{- argument.name }}{{ argument.default ? (' = '~argument.default)|raw }}
 {%- if not loop.last %}, {% endif %}
 {%- endfor %} )
 {{- method.response.types ? ': '~method.response.types|join('|') }}
@@ -25,7 +25,7 @@
 | Parameter | Type | Description |
 |-----------|------|-------------|
 {% for argument in method.arguments %}
-| `{{ argument.name }}` | **{{ argument.types ? argument.types|join('&#124;')|raw }}** | {{ argument.description|replace({'|': '&#124;'})|raw }} |
+| `{{ argument.name }}` | **{{ argument.types ? argument.types|join('\\|')|raw|replace({'|': '\\|'}) }}** | {{ argument.description|raw|replace({'|': '\\|'}) }} |
 {% endfor %}
 
 {% endif %}{# method.arguments is not empty #}
@@ -50,4 +50,3 @@
 {% endif %}{# method.tags.see || method.tags.link #}
 
 ---
-
