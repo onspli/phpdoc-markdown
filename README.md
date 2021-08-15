@@ -32,7 +32,7 @@ Read more about [installation of phpDocumentator](https://phpdoc.org/). Note tha
 Next, run phpDocumentor and set template as `vendor/onspli/phpdoc-markdown-public/data/templates/markdown-public`.
 
 ```bash
-$ phpDocumentator.phar --directory=src/ --target=docs/ --template="vendor/onspli/phpdoc-markdown-public/data/templates/markdown-public" --title="My Project Documentation"
+$ phpDocumentator.phar --directory=src --target=docs --template=vendor/onspli/phpdoc-markdown-public/data/templates/markdown-public
 ```
 The documentation will be generated to `docs/README.md` file.
 
