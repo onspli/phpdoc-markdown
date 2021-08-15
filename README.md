@@ -18,11 +18,11 @@ composer require onspli/phpdoc-markdown
 
 ## Usage
 
-First, you need to install phpDocumentator. There are multiple options how to install it, one of them is using the PHAR:
+First, you need to install phpDocumentor. There are multiple options how to install it, one of them is using the PHAR:
 ```bash
 $ wget https://phpdoc.org/phpDocumentor.phar
 ```
-Read more about [installation of phpDocumentator](https://phpdoc.org/). Note that phpDocumentator is also available via Composer, however its documentation states
+Read more about [installation of phpDocumentor](https://phpdoc.org/). Note that phpDocumentor is also available via Composer, however its documentation states
 > Ah, you discovered our secret. There is a phpDocumentor composer package that you could use to install phpDocumentor.
 >
 > However: phpDocumentor is a complex application, and its libraries are used in countless other libraries and applications (2 of our libraries have more than 150 million downloads each); and this means that the chances for a conflict between one of our dependencies and yours is high. And when I say high, it is really high.
